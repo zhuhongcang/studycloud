@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eureka-server7001/eureka.iml" filepath="$PROJECT_DIR$/eureka-server7001/eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server7002/eureka-server7002.iml" filepath="$PROJECT_DIR$/eureka-server7002/eureka-server7002.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server7003/eureka-server7003.iml" filepath="$PROJECT_DIR$/eureka-server7003/eureka-server7003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/studycloud.iml" filepath="$PROJECT_DIR$/studycloud.iml" />
+    </modules>
+  </component>
+</project>
