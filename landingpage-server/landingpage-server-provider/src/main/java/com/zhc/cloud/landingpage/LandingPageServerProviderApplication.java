@@ -10,8 +10,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  */
 @EnableEurekaClient
 @SpringBootApplication
-public class LandingPageServicerApiApplication {
+public class LandingPageServerProviderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(LandingPageServicerApiApplication.class, args);
+        SpringApplication.run(LandingPageServerProviderApplication.class, args);
     }
 }
