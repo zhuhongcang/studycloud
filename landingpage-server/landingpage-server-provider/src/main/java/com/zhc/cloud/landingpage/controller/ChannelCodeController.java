@@ -21,7 +21,7 @@ public class ChannelCodeController {
     @Resource
     private ChannelCodeService channelCodePageService;
 
-    @PostMapping
+    @PostMapping("/getById")
     public Response getById(@RequestParam("id") Long id) {
         return Response.success(channelCodePageService.getById(id));
     }

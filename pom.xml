@@ -14,6 +14,7 @@
         <module>eureka-server7003</module>
         <module>landingpage-server</module>
         <module>common</module>
+        <module>gateway</module>
     </modules>
     <name>studycloud</name>
     <description>Parent Project</description>

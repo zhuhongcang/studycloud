@@ -33,7 +33,7 @@ public class ChannelCode {
     @TableField("auid")
     private Long auid;
 
-    @TableField("anme")
+    @TableField("aname")
     private String aname;
 
     @TableField("utm_source")

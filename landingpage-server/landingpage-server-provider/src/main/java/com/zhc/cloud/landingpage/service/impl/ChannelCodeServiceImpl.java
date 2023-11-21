@@ -12,8 +12,8 @@ import javax.annotation.Resource;
  * @author zhuhongcang
  * @date 2023/11/21
  */
-@Service
 @Slf4j
+@Service
 public class ChannelCodeServiceImpl implements ChannelCodeService {
     @Resource
     private ChannelCodeDao channelCodeDao;
