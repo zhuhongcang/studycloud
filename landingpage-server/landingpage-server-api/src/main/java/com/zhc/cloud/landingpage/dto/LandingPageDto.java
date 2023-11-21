@@ -1,4 +1,4 @@
-package com.zhc.cloud.landingpage.landingpage.dto;
+package com.zhc.cloud.landingpage.dto;
 
 /**
  * @author zhuhongcang

@@ -71,6 +71,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
+        <!--api-->
+        <dependency>
+            <groupId>com.zhc.cloud</groupId>
+            <artifactId>landingpage-server-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 

@@ -1,8 +1,7 @@
 package com.zhc.cloud.landingpage.controller;
 
 import com.zhc.cloud.common.response.Response;
-import com.zhc.cloud.landingpage.response.LandingPageResp;
-import com.zhc.cloud.landingpage.service.LandingPageService;
+import com.zhc.cloud.landingpage.service.ChannelCodeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,14 +15,14 @@ import javax.annotation.Resource;
  * @date 2023/11/21
  */
 @RestController
-@RequestMapping("/landingpage")
+@RequestMapping("/channelCode")
 @Slf4j
-public class LandingPageController {
+public class ChannelCodeController {
     @Resource
-    private LandingPageService landingPageService;
+    private ChannelCodeService channelCodePageService;
 
     @PostMapping
-    public Response<LandingPageResp> getById(@RequestParam("id") Long id) {
-        return null;
+    public Response getById(@RequestParam("id") Long id) {
+        return Response.success(channelCodePageService.getById(id));
     }
 }
