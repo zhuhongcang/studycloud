@@ -15,13 +15,4 @@
         <module>landingpage-server-api</module>
         <module>landingpage-server-provider</module>
     </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>com.zhc.cloud</groupId>
-            <artifactId>common</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
-
 </project>
