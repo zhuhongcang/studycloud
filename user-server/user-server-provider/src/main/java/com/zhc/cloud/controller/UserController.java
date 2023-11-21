@@ -15,7 +15,7 @@ import javax.annotation.Resource;
  * @date 2023/11/21
  */
 @RestController
-@RequestMapping("/channelCode")
+@RequestMapping("/user")
 @Slf4j
 public class UserController {
     @Resource
