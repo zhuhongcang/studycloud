@@ -10,6 +10,18 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/landing_page?useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 123456
+  redis:
+    host: 192.168.88.103
+    port: 6379
+    password: Zhc123..
+    timeout: 3000
+    database: 0
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 1ms
+        max-idle: 4
+        min-idle: 0
 logging:
   config: classpath:logback/logback.xml
 eureka:
