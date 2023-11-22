@@ -6,6 +6,8 @@ package com.zhc.cloud.service;
  */
 public interface RedisTestService {
     String test1();
+
     String test2(Long num);
+
     String test3(String key);
 }

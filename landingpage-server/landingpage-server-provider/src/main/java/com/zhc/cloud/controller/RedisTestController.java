@@ -15,7 +15,7 @@ import javax.annotation.Resource;
  * @date 2023/11/21
  */
 @RestController
-@RequestMapping("/channelCode")
+@RequestMapping("/redis")
 @Slf4j
 public class RedisTestController {
     @Resource
