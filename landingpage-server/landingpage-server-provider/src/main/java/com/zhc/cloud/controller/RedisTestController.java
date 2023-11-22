@@ -1,7 +1,7 @@
 package com.zhc.cloud.controller;
 
 import com.zhc.cloud.common.response.Response;
-import com.zhc.cloud.service.ChannelCodeService;
+import com.zhc.cloud.service.RedisTestService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,14 +19,20 @@ import javax.annotation.Resource;
 @Slf4j
 public class RedisTestController {
     @Resource
-    private ChannelCodeService channelCodePageService;
+    private RedisTestService redisTestService;
 
-    @PostMapping("/getById")
-    public Response getById(@RequestParam("id") Long id) {
-        return Response.success(channelCodePageService.getById(id));
+    @PostMapping("/redisTest1")
+    public Response getById() {
+        return Response.success(redisTestService.test1());
     }
-    @PostMapping("/testGetById")
+
+    @PostMapping("/redisTest2")
     public Response testGetById(@RequestParam("id") Long id) {
-        return Response.success(channelCodePageService.testGetById(id));
+        return Response.success(redisTestService.test2(id));
+    }
+
+    @PostMapping("/redisTest3")
+    public Response testGetById(@RequestParam("key") String key) {
+        return Response.success(redisTestService.test3(key));
     }
 }
