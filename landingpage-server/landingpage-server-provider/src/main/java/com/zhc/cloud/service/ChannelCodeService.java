@@ -8,4 +8,6 @@ import com.zhc.cloud.entity.ChannelCode;
  */
 public interface ChannelCodeService {
     ChannelCode getById(Long id);
+
+    ChannelCode testGetById(Long id);
 }

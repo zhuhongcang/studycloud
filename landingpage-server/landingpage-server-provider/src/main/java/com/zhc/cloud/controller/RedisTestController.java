@@ -17,12 +17,16 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/channelCode")
 @Slf4j
-public class ChannelCodeController {
+public class RedisTestController {
     @Resource
     private ChannelCodeService channelCodePageService;
 
     @PostMapping("/getById")
     public Response getById(@RequestParam("id") Long id) {
         return Response.success(channelCodePageService.getById(id));
+    }
+    @PostMapping("/testGetById")
+    public Response testGetById(@RequestParam("id") Long id) {
+        return Response.success(channelCodePageService.testGetById(id));
     }
 }

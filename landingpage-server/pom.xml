@@ -15,4 +15,12 @@
         <module>landingpage-server-api</module>
         <module>landingpage-server-provider</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
+        </dependency>
+    </dependencies>
 </project>
