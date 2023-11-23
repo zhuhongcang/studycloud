@@ -10,4 +10,6 @@ public interface ChannelCodeService {
     ChannelCode getById(Long id);
 
     ChannelCode testGetById(Long id);
+
+    int save(ChannelCode channelCode);
 }

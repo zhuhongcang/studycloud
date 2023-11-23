@@ -4,6 +4,7 @@ import com.zhc.cloud.common.response.Response;
 import com.zhc.cloud.response.LandingPageResp;
 import com.zhc.cloud.service.LandingPageService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,11 +19,12 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/landingpage")
 @Slf4j
+@Validated
 public class LandingPageController {
     @Resource
     private LandingPageService landingPageService;
 
-    @PostMapping
+    @PostMapping("/getById")
     public Response<LandingPageResp> getById(@RequestParam("id") Long id) {
         return null;
     }

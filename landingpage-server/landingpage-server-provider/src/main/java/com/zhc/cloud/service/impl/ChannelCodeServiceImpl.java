@@ -9,6 +9,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Objects;
 
 /**
  * @author zhuhongcang
@@ -33,5 +34,16 @@ public class ChannelCodeServiceImpl implements ChannelCodeService {
         ChannelCode channelCode = channelCodeDao.selectById(id);
         redisTemplate.opsForValue().set("channelCode" + channelCode.getChannelId(), JSONObject.toJSONString(channelCode));
         return channelCode;
+    }
+
+    @Override
+    public int save(ChannelCode channelCode) {
+        int count = 0;
+        if (Objects.nonNull(channelCode) && Objects.nonNull(channelCode.getChannelId())) {
+            count = channelCodeDao.updateById(channelCode);
+        } else {
+            count = channelCodeDao.insert(channelCode);
+        }
+        return count;
     }
 }
