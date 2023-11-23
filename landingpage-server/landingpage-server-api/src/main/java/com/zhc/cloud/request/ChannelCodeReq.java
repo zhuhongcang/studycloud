@@ -11,7 +11,6 @@ import javax.validation.constraints.NotNull;
  */
 @Data
 public class ChannelCodeReq {
-    @NotNull(message = "渠道id不能为空")
     private Long channelId;
 
     @NotNull(message = "渠道Code不能为空")
