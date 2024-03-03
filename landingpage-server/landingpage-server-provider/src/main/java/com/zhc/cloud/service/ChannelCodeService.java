@@ -12,4 +12,6 @@ public interface ChannelCodeService {
     ChannelCode testGetById(Long id);
 
     int save(ChannelCode channelCode);
+
+    int synchroChannelCode(Integer type);
 }

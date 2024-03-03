@@ -13,8 +13,8 @@ import java.util.Date;
  * @date 2023/11/21
  */
 @Data
-@TableName("channel_code")
-public class ChannelCode {
+@TableName("channel_code_copy")
+public class ChannelCodeCopy {
     @TableId(value = "channel_id", type = IdType.AUTO)
     private Long channelId;
 
@@ -37,10 +37,10 @@ public class ChannelCode {
     private String aname;
 
     @TableField("utm_source")
-    private String utm_source;
+    private String utmSource;
 
     @TableField("utm_plan")
-    private Long utm_plan;
+    private Long utmPlan;
 
     @TableField("account")
     private String account;

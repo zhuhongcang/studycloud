@@ -19,8 +19,8 @@ public class ChannelCodeMapper implements IMapper<ChannelCodeReq, ChannelCode> {
         channelCode.setChannelName(source.getChannelName());
         channelCode.setSourceTypeId(source.getSourceTypeId());
         channelCode.setSourceTypeName(source.getSourceTypeName());
-        channelCode.setUtmSource(source.getUtmSource());
-        channelCode.setUtmPlan(source.getUtmPlan());
+        channelCode.setUtm_source(source.getUtmSource());
+        channelCode.setUtm_plan(source.getUtmPlan());
         channelCode.setAccount(source.getAccount());
         channelCode.setPlanName(source.getPlanName());
         channelCode.setVst(source.getVst());

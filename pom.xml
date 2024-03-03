@@ -51,6 +51,7 @@
         <logback.version>1.1.7</logback.version>
         <!--<logback.ext.version>0.1.1</logback.ext.version>-->
         <fastjson.version>1.2.70</fastjson.version>
+        <!--<pageHelper.version>4.1.0</pageHelper.version>-->
 
     </properties>
 
@@ -130,6 +131,11 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+            <!--<dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pageHelper.version}</version>
+            </dependency>-->
         </dependencies>
     </dependencyManagement>
 

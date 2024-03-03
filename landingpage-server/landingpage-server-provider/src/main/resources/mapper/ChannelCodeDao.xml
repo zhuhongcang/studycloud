@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.zhc.cloud.dao.ChannelCodeDao" >
+  <resultMap id="BaseResultMap" type="com.zhc.cloud.entity.ChannelCode" >
+    <id column="channel_id" property="channelId" jdbcType="BIGINT" />
+    <result column="channel_code" property="channelCode" jdbcType="BIGINT" />
+    <result column="channel_name" property="channelName" jdbcType="VARCHAR" />
+    <result column="source_type_id" property="sourceTypeId" jdbcType="BIGINT" />
+    <result column="source_type_name" property="sourceTypeName" jdbcType="VARCHAR" />
+    <result column="auid" property="auid" jdbcType="BIGINT" />
+    <result column="aname" property="aname" jdbcType="VARCHAR" />
+    <result column="utm_source" property="utm_source" jdbcType="VARCHAR" />
+    <result column="utm_plan" property="utm_plan" jdbcType="BIGINT" />
+    <result column="account" property="account" jdbcType="VARCHAR" />
+    <result column="plan_name" property="planName" jdbcType="VARCHAR" />
+    <result column="vst" property="vst" jdbcType="BIGINT" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="is_hide" property="isHide" jdbcType="INTEGER" />
+  </resultMap>
+  <insert id="batchInsert">
+    insert into channel_code
+    (channel_id, channel_code, channel_name, source_type_id, source_type_name, auid, aname, utm_source, utm_plan, account, plan_name, vst,create_time)
+    values
+    <foreach collection="list" item="it" separator="," close=";">
+      (${it.channelId}, #{it.channelCode}, #{it.channelName}, #{it.sourceTypeId}, #{it.sourceTypeName}, #{it.auid}, #{it.aname},
+      #{it.utm_source}, #{it.utm_plan}, #{it.account}, #{it.planName}, #{it.vst}, #{it.createTime}
+      )
+    </foreach>
+  </insert>
+
+  <update id="truncateTable">
+    truncate table channel_code
+  </update>
+</mapper>
