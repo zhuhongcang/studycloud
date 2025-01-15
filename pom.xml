@@ -52,6 +52,7 @@
         <!--<logback.ext.version>0.1.1</logback.ext.version>-->
         <fastjson.version>1.2.70</fastjson.version>
         <!--<pageHelper.version>4.1.0</pageHelper.version>-->
+        <hutool.version>5.7.22</hutool.version>
 
     </properties>
 
@@ -136,6 +137,12 @@
                 <artifactId>pagehelper</artifactId>
                 <version>${pageHelper.version}</version>
             </dependency>-->
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

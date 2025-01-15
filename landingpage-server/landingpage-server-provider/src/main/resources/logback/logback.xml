@@ -90,7 +90,7 @@
     <!--<logger name="com.ctrip.framework.apollo" level="WARN" />-->
 
     <!--开发环境为DEBUG等级 TRACE, DEBUG, INFO, WARN, ERROR, ALL 和 OFF，不能设置为INHERITED或者同义词NULL。默认是DEBUG。-->
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="INFO_ROLLING"/>
         <appender-ref ref="DEBUG_ROLLING"/>
         <appender-ref ref="ERROR_ROLLING"/>

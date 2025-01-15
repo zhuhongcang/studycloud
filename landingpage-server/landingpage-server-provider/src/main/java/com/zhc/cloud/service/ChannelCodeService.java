@@ -14,4 +14,8 @@ public interface ChannelCodeService {
     int save(ChannelCode channelCode);
 
     int synchroChannelCode(Integer type);
+
+    int synchroChannelCodeByJdbc(Integer type);
+
+    void changeTableName(boolean needDel);
 }

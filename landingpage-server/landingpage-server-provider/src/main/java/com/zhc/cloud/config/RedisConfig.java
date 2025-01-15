@@ -40,7 +40,8 @@ public class RedisConfig extends CachingConfigurerSupport {
      */
     @Bean
     public RedisTemplate<String, Object> stringSerializerRedisTemplate() {
-        RedisSerializer<String> stringSerializer = new StringRedisSerializer();
+//        RedisSerializer<String> stringSerializer = new StringRedisSerializer();
+        RedisSerializer<Object> stringSerializer = new GenericJackson2JsonRedisSerializer();
         redisTemplate.setKeySerializer(stringSerializer);
         redisTemplate.setValueSerializer(stringSerializer);
         redisTemplate.setHashKeySerializer(stringSerializer);

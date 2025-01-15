@@ -29,4 +29,8 @@ public class SynchroChannelCodeController {
     public Response syncChannelCode(@RequestParam("type") @Min(value = 0L, message = "type必须大于 0") Integer type) {
         return Response.success(channelCodeService.synchroChannelCode(type));
     }
+    @PostMapping("/syncChannelCodeByJDBC")
+    public Response syncChannelCodeByJDBC(@RequestParam("type") @Min(value = 0L, message = "type必须大于 0") Integer type) {
+        return Response.success(channelCodeService.synchroChannelCodeByJdbc(type));
+    }
 }

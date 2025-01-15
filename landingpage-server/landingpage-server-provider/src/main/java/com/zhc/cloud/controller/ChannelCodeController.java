@@ -32,10 +32,15 @@ public class ChannelCodeController {
     public Response getById(@RequestParam("id") @Min(value = 1L, message = "id必须大于 0") Long id) {
         return Response.success(channelCodeService.getById(id));
     }
+    @PostMapping("/changeCopyTable")
+    public Response changeCopyTable(@RequestParam("needDel")Integer needDel) {
+        channelCodeService.changeTableName(needDel==1);
+        return Response.success("1");
+    }
 
     @PostMapping("/save")
     public Response saveChannelCode(@Valid @RequestBody ChannelCodeReq channelCodeReq) {
-        log.debug("ChannelCodeController::saveChannelCode::param:{}", JSONObject.toJSONString(channelCodeReq));
+        log.info("ChannelCodeController::saveChannelCode::param:{}", JSONObject.toJSONString(channelCodeReq));
         ChannelCode channelCode = channelCodeMapper.to(channelCodeReq);
         return Response.success(channelCodeService.save(channelCode));
     }

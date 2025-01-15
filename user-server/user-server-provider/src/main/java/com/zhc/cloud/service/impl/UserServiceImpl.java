@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
         User user = userDao.selectById(id);
         LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(User::getAuid, "test");
-        User user1=userDao.selectOne(queryWrapper);
+        List<User> user1=userDao.selectList(queryWrapper);
         String account = "12";
         List<User> list = new ArrayList<>();
         list.add(new User());
